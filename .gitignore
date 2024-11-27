@@ -1,3 +1,20 @@
+# CLion specific
+.idea/
+cmake-build-*/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+*.cbp
+
+# C specific
 # Prerequisites
 *.d
 
@@ -22,11 +39,11 @@
 *.la
 *.lo
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
 
 # Executables
 *.exe
@@ -36,17 +53,24 @@
 *.x86_64
 *.hex
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
+# Windows specific
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
 
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# VS Code (in case you sometimes use it)
+.vscode/
+*.code-workspace
+
+# Build folders
+bin/
+build/
+out/
