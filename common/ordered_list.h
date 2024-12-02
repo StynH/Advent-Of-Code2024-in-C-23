@@ -1,8 +1,6 @@
 #ifndef ORDEREDLIST_H
 #define ORDEREDLIST_H
 
-#include <stdint.h>
-
 typedef struct OrderedListNode{
     void* data;
     struct OrderedListNode* next;

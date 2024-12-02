@@ -1,5 +1,5 @@
 #include <file_handling.h>
-#include <orderedlist.h>
+#include <ordered_list.h>
 #include <string.h>
 
 #define INPUT_FILE_LOCATION "files/input.txt"
@@ -93,11 +93,15 @@ part_two(const FileContext* context) {
 
 int
 main(void) {
+    printf("Running day 1 of Advent of Code 2024...\n");
     const FileContext* context = read_file_into_buffer(INPUT_FILE_LOCATION);
 
     if (context->error_code == FILE_HANDLING_NO_ERR) {
         part_one(context);
         part_two(context);
+    }
+    else {
+        printf("Failed to open file '%s', Error Code: %d", INPUT_FILE_LOCATION, context->error_code);
     }
 
     return 0;

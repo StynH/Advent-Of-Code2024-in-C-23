@@ -4,7 +4,7 @@
 
 FileContext*
 read_file_into_buffer(const char* path){
-    FileContext* context = (FileContext*)malloc(sizeof(FileContext));
+    FileContext* context = malloc(sizeof(FileContext));
     FILE* handle = nullptr;
     fopen_s(&handle, path, "rb");
 

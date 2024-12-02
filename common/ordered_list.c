@@ -1,11 +1,10 @@
-#include "orderedlist.h"
+#include "ordered_list.h"
 
-#include <stdio.h>
 #include <stdlib.h>
 
 OrderedListNode*
 ordered_list_create_node(void* data, int(*comparer)(const void*, const void*), OrderedListNode* next){
-    OrderedListNode* new_node = (OrderedListNode*)malloc(sizeof(OrderedListNode));
+    OrderedListNode* new_node = malloc(sizeof(OrderedListNode));
     new_node->data = data;
     new_node->comparer = comparer;
     new_node->next = next;
