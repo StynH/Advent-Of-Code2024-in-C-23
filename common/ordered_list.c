@@ -52,8 +52,8 @@ ordered_list_insert_into(OrderedListNode** list, void* data){
 }
 
 const OrderedListNode*
-ordered_list_get(const OrderedListNode* list, const int index){
-    int counter = 0;
+ordered_list_get(const OrderedListNode* list, const size_t index){
+    size_t counter = 0;
     const OrderedListNode* current = list;
     while(current != nullptr && counter < index){
         current = current->next;

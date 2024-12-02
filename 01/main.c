@@ -80,7 +80,7 @@ part_two(const FileContext* context) {
 
             value = *(int*)node->data;
             if (value == left) {
-                subtotal += 1;
+                ++subtotal;
             }
             ++index;
         }
