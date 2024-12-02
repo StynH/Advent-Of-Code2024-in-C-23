@@ -90,9 +90,11 @@ void part_two(const FileContext* context) {
 
 int main(void) {
     const FileContext* context = read_file_into_buffer(INPUT_FILE_LOCATION);
+
     if (context->error_code == FILE_HANDLING_NO_ERR) {
         part_one(context);
         part_two(context);
     }
+
     return 0;
 }
