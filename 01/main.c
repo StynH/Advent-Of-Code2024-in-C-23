@@ -4,7 +4,8 @@
 
 #define INPUT_FILE_LOCATION "files/input.txt"
 
-int compare(const void* left, const void* right) {
+int
+compare(const void* left, const void* right) {
     const int left_value = *(const int*)left;
     const int right_value = *(const int*)right;
 
@@ -17,7 +18,8 @@ int compare(const void* left, const void* right) {
     return 0;
 }
 
-void part_one(const FileContext* context) {
+void
+part_one(const FileContext* context) {
     char* rest = strdup(context->content);
     const char* line;
 
@@ -45,7 +47,8 @@ void part_one(const FileContext* context) {
     printf("Total Distance: %d\n", total);
 }
 
-void part_two(const FileContext* context) {
+void
+part_two(const FileContext* context) {
     char* rest = strdup(context->content);
     const char* line;
 
@@ -88,7 +91,8 @@ void part_two(const FileContext* context) {
     printf("Total Similarity: %d\n", total);
 }
 
-int main(void) {
+int
+main(void) {
     const FileContext* context = read_file_into_buffer(INPUT_FILE_LOCATION);
 
     if (context->error_code == FILE_HANDLING_NO_ERR) {
