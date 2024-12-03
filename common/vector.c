@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "vector.h"
 
 Vector*
@@ -13,8 +14,7 @@ void
 vector_insert_into(Vector* vector, void* element) {
      if (vector->length == vector->reserved) {
           vector->reserved *= 2;
-          void** nl = realloc(vector->data, vector->reserved * sizeof(void*));
-          vector->data = nl;
+          vector->data = realloc(vector->data, vector->reserved * sizeof(void*));
      }
      vector->data[vector->length++] = element;
 }
@@ -26,6 +26,22 @@ vector_element_at(const Vector* vector, const size_t  index){
      }
 
      return vector->data[index];
+}
+
+void*
+vector_remove_element_at(Vector* vector, size_t index){
+    void* element = vector_element_at(vector, index);
+    for(size_t i = index; i < vector->length - 1; ++i){
+        vector->data[i] = vector->data[i + 1];
+    }
+
+   --vector->length;
+    if(vector->length > INITIAL_SIZE && vector->length <= vector->reserved / 2){
+        vector->reserved /= 2;
+        vector->data = realloc(vector->data, vector->reserved * sizeof(void*));
+    }
+
+    return element;
 }
 
 void

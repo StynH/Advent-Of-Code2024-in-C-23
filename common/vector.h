@@ -14,6 +14,7 @@ typedef struct Vector{
 Vector* vector_create();
 void vector_insert_into(Vector* vector, void* element);
 void* vector_element_at(const Vector* vector, size_t  index);
+void* vector_remove_element_at(Vector* vector, size_t index);
 void vector_destroy(Vector* vector);
 
 #endif //VECTOR_H
