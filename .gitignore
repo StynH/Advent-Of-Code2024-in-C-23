@@ -1,3 +1,6 @@
+# AoC
+files/input.txt
+
 # CLion specific
 .idea/
 cmake-build-*/
